@@ -134,14 +134,14 @@ int main(void)
 
 
 	while(1)
-		 {
+              {
 
 		   //MXC_Delay(5000000);
 
 
 
-		   switch(chg_state)
-		   {
+	       switch(chg_state)
+	       {
 	       case BAT_DET: Read_Battery_Voltage_Current(&Batt_Voltage, &Batt_Current);
 					     printf("Batt_Voltage:  %f\n",Batt_Voltage);
 					     printf("Batt_Current:  %f\n",Batt_Current);
@@ -179,8 +179,8 @@ int main(void)
 		   break;
 
 		   case SWITCH_EN:  MXC_GPIO_OutSet(MXC_GPIO2, MXC_GPIO_PIN_8);
-		                    //chg_state = CC_CV_CHG;
-		                    chg_state = CHG_STOP;
+		                    chg_state = CC_CV_CHG;
+		                    // chg_state = CHG_STOP;
 		   break;
 
 		   case CC_CV_CHG:  CC_CV_Charging(CC_CV_ON);
