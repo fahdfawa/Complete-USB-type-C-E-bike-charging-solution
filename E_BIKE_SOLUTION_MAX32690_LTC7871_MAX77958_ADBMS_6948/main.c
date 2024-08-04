@@ -93,13 +93,7 @@ int main(void)
 	printf("BMS Initialization Done\n");
 
 //	Set_Output_Voltage_LTC7871(HIGH, Batt_Term_Volt);
-//
 //	printf("Output Voltage Setting Done\n");
-
-
-
-
-
 //  	 Set_Output_Voltage_LTC7871(HIGH, 37);
 //  	 Write_Register_LT7871(MFR_IDAC_SETCUR , Data)
 //       printf("Output voltage setted\n");
@@ -110,11 +104,11 @@ int main(void)
 
 	MAX77958_Configuration();
 
-    Mask_Interrupts_PD_Negotiator();
+        Mask_Interrupts_PD_Negotiator();
 
-    Read_and_Clear_Interrupts_PD_Negotiator();
+        Read_and_Clear_Interrupts_PD_Negotiator();
 
-    printf("MAX77958 Initialization Done\n");
+        printf("MAX77958 Initialization Done\n");
 
 	// Reading Source Capabilities of the charger
 	uint32_t src_PDO1, src_PDO2, src_PDO3, src_PDO4, src_PDO5, src_PDO6, src_PDO7, src_PDO8;
